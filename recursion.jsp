@@ -72,7 +72,7 @@
     {
         if(n == 1 || n == 2 ){
 	    return 1;    
-	{
+	}
 	else{
 	    return fibonacci(n - 1) + fibonacci(n - 2);
 	} //TODO
@@ -108,22 +108,22 @@
     
         public Tree(int value)
         {
-    	    //TODO
+	     this.value = value; //TODO
         }
     
         public int getValue()
         {
-    	    //TODO
+	    return value; //TODO
         }
     
         public ArrayList<Tree> getChildren()
         {
-    	    //TODO
+	    return children; //TODO
         }
     
         public void add(Tree child)
         {
-    	    //TODO
+	    children.add(child); //TODO
         }
     }
     
