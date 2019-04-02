@@ -70,7 +70,12 @@
      */
     public int fibonacci(int n)
     {
-        //TODO
+        if(n <= 1 || n == 2 ){
+	    return 1;    
+	{
+	else{
+	    return (n + fibonacci(n - 1));
+	} //TODO
     }
 
     
