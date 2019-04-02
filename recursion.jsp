@@ -34,9 +34,8 @@
          * This lets our recursion know when to stop.
          */
 	if (value == 1){
-	    return value;
-	} //TODO
-
+	    return 1;
+	} 
 
         /*
          * Here is the recursive statement. The function calls itself when the 
@@ -108,7 +107,7 @@
     
         public Tree(int value)
         {
-	     this.value = value; //TODO
+	    this.value = value; //TODO
         }
     
         public int getValue()
@@ -155,12 +154,15 @@
      */
     public int nnaryTreeSize(int branchingFactor, int height)
     {
+	int nodeTotal = 0;
         if (height == 1) 
         {
-    	    //TODO
+	    return nodeTotal + 1; //TODO
         }
-        
-    	//TODO
+	else {
+	    nodeTotal = (int)Math.pow(branchingFactor, (height - 1)) + nnaryTreeSize(branchingFactor, height - 1);
+            return nodeTotal;
+	} //TODO
     }
 
     /** **********************************************************************
@@ -173,7 +175,11 @@
      */
     public int treeSum(Tree tree)
     {
-    	//TODO
+        int treeTotal = 0;
+        for(Tree child : tree.getChildren()){
+            treeTotal = child.getValue() + treeSum(child);//TODO
+	    }
+        return treeTotal + tree.getValue();
     }
     
     /** **********************************************************************
@@ -256,8 +262,8 @@
          */
         else 
         {
-        	return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);
-    	}
+		return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);
+	}
     }
 %>
 <center>
