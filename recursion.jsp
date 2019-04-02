@@ -34,7 +34,7 @@
          * This lets our recursion know when to stop.
          */
 	if (value == 1){
-	    return 1;
+	    return value;
 	} //TODO
 
 
@@ -70,11 +70,11 @@
      */
     public int fibonacci(int n)
     {
-        if(n <= 1 || n == 2 ){
+        if(n == 1 || n == 2 ){
 	    return 1;    
 	{
 	else{
-	    return (n + fibonacci(n - 1));
+	    return fibonacci(n - 1) + fibonacci(n - 2);
 	} //TODO
     }
 
